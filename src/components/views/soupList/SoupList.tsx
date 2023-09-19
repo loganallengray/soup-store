@@ -1,6 +1,6 @@
 const SoupList = () => {
     return (
-        <div></div>
+        <div>Menu</div>
     )
 }
 
