@@ -1,9 +1,14 @@
 :root {
     /* Base Colors */
     /* To be added later */
+    --black: #161616;
+    --white: #fff;
+    --off-white: #eee;
+    --orange: #CF3C28;
+    --yellow: #F9A71F;
 
     /* Header */
-    --header-background: #333;
-    --header-link-color: #dedede;
-    --header-link-hover: #fff;
+    --header-background: var(--orange);
+    --header-link-color: var(--off-white);
+    --header-link-hover: var(--white);
 }
