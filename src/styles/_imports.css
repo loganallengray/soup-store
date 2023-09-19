@@ -1,4 +1,5 @@
 /* Styles Folder */
+@import url("./colors.css");
 
 /* Header */
 @import url("../components/header/Header.css");
