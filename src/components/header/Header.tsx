@@ -2,7 +2,20 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
-        <div id="header"></div>
+        <div id="header">
+            <Link
+                className="header-link-item"
+                to="/"
+            >Home</Link>
+            <Link
+                className="header-link-item"
+                to="/menu"
+            >Menu</Link>
+            <Link
+                className="header-link-item"
+                to="/cart"
+            >Cart</Link>
+        </div>
     )
 }
 
