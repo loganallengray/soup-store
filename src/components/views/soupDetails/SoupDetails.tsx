@@ -1,6 +1,6 @@
 const SoupDetails = () => {
     return (
-        <div></div>
+        <div>Details</div>
     )
 }
 
