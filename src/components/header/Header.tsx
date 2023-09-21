@@ -5,16 +5,25 @@ const Header = () => {
         <div id="header">
             <Link
                 className="header-link-item"
-                to="/"
-            >Home</Link>
+                to="/">
+                <p>
+                    SoupScript
+                </p>
+            </Link>
             <Link
                 className="header-link-item"
-                to="/menu"
-            >Menu</Link>
+                to="/menu">
+                <p>
+                    Menu
+                </p>
+            </Link>
             <Link
                 className="header-link-item"
-                to="/cart"
-            >Cart</Link>
+                to="/cart">
+                <p>
+                    Cart
+                </p>
+            </Link>
         </div>
     )
 }
