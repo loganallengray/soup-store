@@ -6,7 +6,7 @@ const Header = () => {
             <Link
                 className="header-link-item"
                 to="/"
-            >Home</Link>
+            >SoupScript</Link>
             <Link
                 className="header-link-item"
                 to="/menu"

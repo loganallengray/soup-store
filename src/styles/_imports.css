@@ -3,3 +3,6 @@
 
 /* Header */
 @import url("../components/header/Header.css");
+
+/* Homepage */
+@import url("../components/views/homepage/Homepage.css");

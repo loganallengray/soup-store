@@ -13,7 +13,9 @@ const App = () => {
 		<div className="app">
 			<AppContext.Provider value={appContextProps}>
 				<Header />
-				<AppRoutes />
+				<div className="app-view">
+					<AppRoutes />
+				</div>
 			</AppContext.Provider>
 		</div>
 	);
