@@ -23,6 +23,16 @@ $ cd soup-store
 $ npm ci
 ```
 
+Start JSON Database API.
+
+```bash
+# Go into API folder
+$ cd api
+
+# Serve database
+$ json-server -p 8088 database.json
+```
+
 Open another terminal window/tab and run "npm start" in the soup-store directory.
 
 ```bash
