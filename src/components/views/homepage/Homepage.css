@@ -20,6 +20,8 @@
 
 #home-page-menu-link {
     margin: 10px 0;
+    background-color: var(--yellow);
+    box-shadow: 0 0 10px #333;
 }
 
 #home-image-one {
