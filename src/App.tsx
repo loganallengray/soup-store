@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import AppRoutes from './components/AppRoutes';
 import Header from './components/header/Header';
@@ -9,6 +9,13 @@ const appContextProps = {
 };
 
 const App = () => {
+	// fetches list of users
+	// useEffect(() => {
+	// 	fetch('http://localhost:8088/users')
+	// 		.then(response => response.text())
+	// 		.then(text => console.log(text))
+	// }, [])
+
 	return (
 		<div className="app">
 			<AppContext.Provider value={appContextProps}>
