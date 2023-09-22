@@ -7,3 +7,6 @@
 
 /* Homepage */
 @import url("../components/views/homepage/Homepage.css");
+
+/* Menu */
+@import url("../components/views/soupList/SoupList.css");

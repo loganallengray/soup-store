@@ -1,11 +1,23 @@
 /* Buttons */
+/* ------------------------------------------------------------------------- */
 
 .button {
     border-radius: 5px;
-    padding: 0.5rem;
     border: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
 }
 
 .button:hover {
     cursor: pointer;
+}
+
+/* Colored Background */
+
+.b-yellow {
+    background-color: var(--yellow);
+}
+
+.b-yellow:hover {
+    background-color: var(--yellow-highlight);
 }

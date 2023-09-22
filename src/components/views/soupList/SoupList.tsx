@@ -1,12 +1,10 @@
 import AppContext from "../../../modules/context/app-context";
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getAllSoup } from "../../../modules/fetch/soup";
 import SoupCard from "./SoupCard";
 
 const SoupList = () => {
-    const [soupList, setSoupList] = useState([]);
-
-    const cxt = useContext(AppContext);
+    const [soupList, setSoupList] = useState<any[]>([]);
 
     useEffect(() => {
         getAllSoup()
@@ -14,9 +12,9 @@ const SoupList = () => {
     }, [])
 
     return (
-        <div>
+        <div id="soup-list">
             {soupList.map(soup => (
-                <SoupCard soup={soup} />
+                <SoupCard key={soup.id} soup={soup} />
             ))}
         </div>
     )

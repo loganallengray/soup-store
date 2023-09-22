@@ -4,7 +4,10 @@
     --white: #fff;
     --off-white: #eee;
     --orange: #CF3C28;
-    --yellow: #F9A71F;
+    --yellow: #f9a319;
+
+    /* Highlights */
+    --yellow-highlight: #f9ad34;
 
     /* Transparent Values */
     --black-opacity-25: rgba(0, 0, 0, 0.25);
@@ -15,4 +18,8 @@
     --header-background: var(--orange);
     --header-link-color: var(--off-white);
     --header-link-hover: var(--white);
+}
+
+body {
+    background-color: var(--off-white);
 }
