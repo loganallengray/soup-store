@@ -1,12 +1,24 @@
 import AppContext from "../../../modules/context/app-context";
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { getAllSoup } from "../../../modules/fetch/soup";
+import SoupCard from "./SoupCard";
 
 const SoupList = () => {
+    const [soupList, setSoupList] = useState([]);
+
     const cxt = useContext(AppContext);
-    const testString = cxt?.test;
+
+    useEffect(() => {
+        getAllSoup()
+            .then(res => setSoupList(res))
+    }, [])
 
     return (
-        <div>{testString}</div>
+        <div>
+            {soupList.map(soup => (
+                <SoupCard soup={soup} />
+            ))}
+        </div>
     )
 }
 
