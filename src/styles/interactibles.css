@@ -1,10 +1,24 @@
+/* Inputs */
+/* ------------------------------------------------------------------------- */
+
+.input {
+    border: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--white);
+}
+
+.input:focus {
+    outline: none;
+}
+
 /* Buttons */
 /* ------------------------------------------------------------------------- */
 
 .button {
     border-radius: 5px;
     border: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 0.5rem 1rem;
 }
 

@@ -56,12 +56,29 @@ const SoupDetails = () => {
     }
 
     return (
-        <div id="soup-details-card">
-            <div id="soup-details-info">
-                <h2>{soup.name}</h2>
-                <NutritionLabel soup={soup} />
+        <div id="soup-details-page">
+            <div id="soup-details-body">
+                <div id="soup-details-info">
+                    <div id="soup-details-info-body">
+                        <h2 id="soup-details-name">{soup.name}</h2>
+                        <p id="soup-details-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p id="soup-details-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div id="soup-details-info-side">
+                        <NutritionLabel soup={soup} />
+                    </div>
+                </div>
+                <div id="soup-details-options">
+                    <div className="order-options">
+                        <input className="input" type="number" placeholder="1" />
+                        <div className="input">${soup.price}</div>
+                    </div>
+                    <button className="button b-yellow">Order</button>
+                    <button className="button b-yellow">Nutrition Details</button>
+                </div>
+                {/* <NutritionLabel soup={soup} /> */}
             </div>
-            <img></img>
+            <img id="soup-details-image" src="https://images.pexels.com/photos/1707270/pexels-photo-1707270.jpeg" />
         </div>
     )
 }
