@@ -1,0 +1,62 @@
+#soup-details-page {
+    display: flex;
+}
+
+#soup-details-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    height: calc(100vh - 50px);
+}
+
+#soup-details-info {
+    display: flex;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+#soup-details-options {
+    padding: 1rem;
+    padding-bottom: 2rem;
+}
+
+#soup-details-info-side {
+    min-width: 270px;
+    margin-left: 1rem;
+}
+
+#soup-details-name {
+    font-size: 2rem;
+}
+
+#soup-details-description {
+    margin-top: 0.5rem;
+}
+
+#soup-details-image {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    right: 0;
+    object-fit: cover;
+}
+
+#soup-details-page button {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.order-options {
+    display: flex;
+    text-align: center;
+}
+
+.order-options input {
+    margin-right: 10px;
+    width: 75px;
+}
+
+.order-options div {
+    width: 100%;
+}

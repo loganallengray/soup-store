@@ -1,11 +1,26 @@
+/* Inputs */
+/* ------------------------------------------------------------------------- */
+
+.input {
+    border: none;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--white);
+}
+
+.input:focus {
+    outline: none;
+}
+
 /* Buttons */
 /* ------------------------------------------------------------------------- */
 
 .button {
     border-radius: 5px;
     border: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 0.5rem 1rem;
+    font-weight: bold;
 }
 
 .button:hover {
@@ -16,8 +31,23 @@
 
 .b-yellow {
     background-color: var(--yellow);
+    border: solid 2px var(--yellow);
 }
 
 .b-yellow:hover {
+    background-color: var(--yellow-highlight);
+}
+
+/* Colored Border background */
+
+.b-border-yellow {
+    background-color: transparent;
+    /* color: var(--yellow); */
+    border: solid 2px var(--yellow);
+}
+
+.b-border-yellow:hover {
+    /* border: solid 2px var(--yellow-highlight); */
+    /* color: var(--black); */
     background-color: var(--yellow-highlight);
 }

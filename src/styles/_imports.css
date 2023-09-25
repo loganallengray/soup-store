@@ -8,5 +8,9 @@
 /* Homepage */
 @import url("../components/views/homepage/Homepage.css");
 
-/* Menu */
+/* Soup Menu */
 @import url("../components/views/soupList/SoupList.css");
+
+/* Soup Detail */
+@import url("../components/views/soupDetails/SoupDetails.css");
+@import url("../components/views/soupDetails/NutritionLabel.css")

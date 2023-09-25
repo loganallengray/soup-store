@@ -1,6 +1,6 @@
 import AppContext from "../../../modules/context/app-context";
 import { useEffect, useState } from 'react';
-import { getAllSoup } from "../../../modules/fetch/soup";
+import { getAllSoup } from "../../../modules/fetch/soupManager";
 import SoupCard from "./SoupCard";
 
 const SoupList = () => {

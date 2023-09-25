@@ -1,0 +1,91 @@
+#nutri-label {
+    border: 2px solid black;
+    width: 270px;
+    padding: 0 7px;
+    background-color: var(--white);
+}
+
+/* P tags */
+#nutri-label p {
+    border-bottom: solid 1px black;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Headers */
+#nutri-label h3 {
+    font-size: 2rem;
+}
+
+#nutri-label .calories-info h3 {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: -10px;
+}
+
+#nutri-label .calories-info h3 span {
+    font-size: 1.8rem;
+}
+
+/* Dividers */
+#nutri-label .no-divider {
+    border-bottom: none !important;
+}
+
+#nutri-label .divider {
+    border-bottom: 1px solid #888989;
+    margin: 2px 0;
+}
+
+#nutri-label .large,
+#nutri-label .medium {
+    background-color: black;
+    border: 0;
+}
+
+#nutri-label .large {
+    height: 10px;
+}
+
+#nutri-label .medium {
+    height: 5px;
+}
+
+#nutri-label .small-text {
+    font-size: 0.85rem;
+}
+
+/* Spacing */
+#nutri-label .right {
+    margin-left: auto;
+}
+
+#nutri-label .indent {
+    margin-left: 1em;
+}
+
+#nutri-label .double-indent {
+    margin-left: 2em;
+}
+
+#nutri-label p .b-title {
+    margin-right: 6px;
+}
+
+#nutri-label .d-value-title {
+    justify-content: end;
+}
+
+/* Boldness */
+#nutri-label .bold {
+    font-weight: 800;
+}
+
+/* Note */
+#nutri-label .note {
+    font-size: 0.6rem;
+    margin: 5px 0;
+    border-bottom: none;
+}
