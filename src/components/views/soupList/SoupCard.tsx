@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { ISoup } from "../../../modules/interfaces";
 
 type Props = {
@@ -5,6 +6,8 @@ type Props = {
 }
 
 const SoupCard = ({ soup }: Props) => {
+    const navigate = useNavigate();
+
     return (
         <div className="soup-list-card">
             <img className="soup-card-image"
@@ -15,7 +18,7 @@ const SoupCard = ({ soup }: Props) => {
                 <p>{soup.calories} Cal</p>
             </div>
             <button className="button b-yellow">Order</button>
-            <button className="button b-yellow">Details</button>
+            <button className="button b-border-yellow" onClick={() => navigate(`${soup.id}`)}>Details</button>
         </div>
     )
 }
