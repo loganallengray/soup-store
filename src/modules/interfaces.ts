@@ -1,6 +1,7 @@
 export interface ISoup {
     id: number,
     name: string,
+    description: string,
     price: number,
     servingSize: string,
     calories: number,
@@ -16,5 +17,6 @@ export interface ISoup {
     calcium: number,
     iron: number,
     potassium: number,
-    caffeine: number
+    caffeine: number,
+    imageUrl: string
 }
