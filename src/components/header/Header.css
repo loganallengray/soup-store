@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     background-color: var(--header-background);
-    height: 50px;
+    height: 60px;
 }
 
 .header-link-item {
@@ -13,8 +13,14 @@
     padding: 0 1rem;
     height: 100%;
     text-decoration: none;
+    font-size: 1.2rem;
 }
 
 .header-link-item:hover {
     color: var(--header-link-hover);
+    background-color: var(--white-opacity-25);
+}
+
+.header-selected-item {
+    background-color: var(--white-opacity-25);
 }
