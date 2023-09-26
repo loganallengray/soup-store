@@ -13,4 +13,8 @@
 
 /* Soup Detail */
 @import url("../components/views/soupDetails/SoupDetails.css");
-@import url("../components/views/soupDetails/NutritionLabel.css")
+@import url("../components/views/soupDetails/NutritionLabel.css");
+
+/* Cart */
+@import url("../components/views/cart/Cart.css");
+@import url("../components/views/cart/CartItem.css");
