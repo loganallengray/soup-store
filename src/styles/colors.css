@@ -19,7 +19,3 @@
     --header-link-color: var(--off-white);
     --header-link-hover: var(--white);
 }
-
-body {
-    background-color: var(--off-white);
-}

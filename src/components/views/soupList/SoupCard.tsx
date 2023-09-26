@@ -11,7 +11,7 @@ const SoupCard = ({ soup }: Props) => {
     return (
         <div className="soup-list-card">
             <img className="soup-card-image"
-                src="https://images.pexels.com/photos/1707270/pexels-photo-1707270.jpeg" />
+                src={soup.imageUrl} />
             <h3 className="soup-card-title">{soup.name}</h3>
             <div className="soup-card-info">
                 <p>${soup.price}</p>

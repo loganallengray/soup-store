@@ -9,6 +9,7 @@ const SoupDetails = () => {
     const [soup, setSoup] = useState<ISoup>({
         id: 0,
         name: "",
+        description: "",
         price: 0,
         servingSize: "",
         calories: 0,
@@ -24,7 +25,8 @@ const SoupDetails = () => {
         calcium: 0,
         iron: 0,
         potassium: 0,
-        caffeine: 0
+        caffeine: 0,
+        imageUrl: ""
     });
 
     const params = useParams();
@@ -61,8 +63,7 @@ const SoupDetails = () => {
                 <div id="soup-details-info">
                     <div id="soup-details-info-body">
                         <h2 id="soup-details-name">{soup.name}</h2>
-                        <p id="soup-details-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p id="soup-details-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p id="soup-details-description">{soup.description}</p>
                     </div>
                     <div id="soup-details-info-side">
                         <NutritionLabel soup={soup} />
@@ -78,7 +79,7 @@ const SoupDetails = () => {
                 </div>
                 {/* <NutritionLabel soup={soup} /> */}
             </div>
-            <img id="soup-details-image" src="https://images.pexels.com/photos/1707270/pexels-photo-1707270.jpeg" />
+            <img id="soup-details-image" src={soup.imageUrl} />
         </div>
     )
 }

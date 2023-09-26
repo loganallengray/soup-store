@@ -10,6 +10,10 @@ body,
 }
 
 .app-view {
-    height: 100%;
+    height: calc(100vh - 50px);
     overflow-y: auto;
+}
+
+body {
+    background-color: var(--off-white);
 }
