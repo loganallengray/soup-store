@@ -11,15 +11,17 @@ const App = () => {
 	const addCartItem = (soup: ISoup) => {
 		const cartCopy = [...cart];
 
-		cartCopy.push(soup)
+		if (cartCopy.filter(item => item.id === soup.id).length === 0) {
+			cartCopy.push(soup)
+		}
 
 		setCart(cartCopy);
 	}
 
-	const removeCartItem = (index: number) => {
+	const removeCartItem = (id: number) => {
 		const cartCopy = [...cart];
 
-		const newCart = cartCopy.splice(index, 1);
+		const newCart = cartCopy.filter(soup => soup.id !== id);
 
 		setCart(newCart);
 	}
