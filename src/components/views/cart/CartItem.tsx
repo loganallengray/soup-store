@@ -12,7 +12,9 @@ const CartItem = ({ soup }: Props) => {
 
     return (
         <div className="cart-item">
-            <img className="cart-item-img" src={soup.imageUrl} />
+            <div className="cart-item-img-container">
+                <img className="cart-item-img" src={soup.imageUrl} />
+            </div>
             <div className="cart-item-body">
                 <div className="cart-item-info">
                     <div className="cart-item-info-text">
