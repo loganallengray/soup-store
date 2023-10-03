@@ -4,6 +4,10 @@ const Header = () => {
     const location = useLocation();
     const currentLocation = location.pathname
 
+    const logout = () => {
+
+    }
+
     return (
         <div id="header">
             <Link
@@ -27,6 +31,23 @@ const Header = () => {
                     Cart
                 </p>
             </Link>
+            {true ? (
+                <Link
+                    className={"header-link-item" + `${currentLocation === "/login" ? " " + "header-selected-item" : ""}`}
+                    to="/login">
+                    <p>
+                        Login
+                    </p>
+                </Link>
+            ) : (
+                <div
+                    className="header-link-item"
+                    onClick={logout}>
+                    <p>
+                        Logout
+                    </p>
+                </div>
+            )}
         </div>
     )
 }

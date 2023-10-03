@@ -11,16 +11,20 @@
     color: var(--header-link-color);
     display: flex;
     padding: 0 1rem;
+    padding-top: 3px;
     height: 100%;
     text-decoration: none;
     font-size: 1.2rem;
+    border-bottom: solid 3px transparent;
 }
 
-.header-link-item:hover {
+.header-link-item:hover,
+.header-selected-item {
     color: var(--header-link-hover);
+    cursor: pointer;
     background-color: var(--white-opacity-25);
 }
 
 .header-selected-item {
-    background-color: var(--white-opacity-25);
+    border-bottom: solid 3px var(--yellow);
 }
