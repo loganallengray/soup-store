@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import CartItem from "./CartItem";
 import AppContext from "../../../modules/context/app-context";
-import { ISoup } from "../../../modules/interfaces";
+import { ICartItem } from "../../../modules/interfaces";
 
 const Cart = () => {
     const cxt = useContext(AppContext);
@@ -14,7 +14,7 @@ const Cart = () => {
                     <h2>My Cart</h2>
                 </div>
                 <div id="cart-container-body">
-                    {cart.map((soup: ISoup) => <CartItem key={soup.id} soup={soup} />)}
+                    {cart.map((item: ICartItem) => <CartItem key={item.soup.id} item={item} />)}
                 </div>
             </div>
             <div id="cart-totals">
