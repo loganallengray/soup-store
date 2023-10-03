@@ -20,3 +20,8 @@ export interface ISoup {
     caffeine: number,
     imageUrl: string
 }
+
+export interface ICartItem {
+    amount: number,
+    soup: ISoup
+}
