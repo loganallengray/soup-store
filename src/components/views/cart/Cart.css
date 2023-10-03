@@ -1,0 +1,43 @@
+#cart-page {
+    display: flex;
+    padding: 0 10%;
+}
+
+#cart-container {
+    width: 60%;
+}
+
+#cart-totals {
+    width: 40%;
+}
+
+#cart-container,
+#cart-totals {
+    padding: 1rem;
+}
+
+#cart-container-head {
+    font-size: 1.8rem;
+}
+
+#cart-container-body {
+    padding: 1rem;
+}
+
+#cart-total-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    font-size: 1.4rem;
+    padding: 0 1rem 0.5rem 1rem;
+    border-bottom: solid 2px #333;
+}
+
+#cart-total-body {
+    padding: 0 1rem;
+}
+
+#cart-totals .b-yellow {
+    margin-top: 1rem;
+    width: 100%;
+}
