@@ -1,0 +1,38 @@
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.auth-form {
+    background-color: var(--white);
+    padding: 1rem;
+    width: 30%;
+    min-width: 300px;
+}
+
+.auth-form h2,
+.auth-link {
+    text-align: center;
+}
+
+.auth-form h2,
+.auth-form label,
+.auth-row {
+    margin-bottom: 0.5rem;
+}
+
+.auth-link {
+    margin: 0;
+}
+
+.auth-form label {
+    display: block;
+}
+
+.auth-form input,
+.auth-form button {
+    width: 100%;
+}
