@@ -1,3 +1,13 @@
+export interface IUser {
+    id: number,
+    userName: string,
+    firstName: string,
+    lastName: string,
+    email: string,
+    address: string,
+    balance: number
+}
+
 export interface ISoup {
     id: number,
     name: string,

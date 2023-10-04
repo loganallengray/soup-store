@@ -1,73 +1,71 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { attemptLogin, registerNewUser } from "../../../modules/fetch/authManager"
 
-export const Register = (props) => {
-    const [player, setPlayer] = useState({
-        name: "",
+export const Register = () => {
+    const [user, setUser] = useState({
+        firstName: "",
+        lastName: "",
         email: "",
-        currency: 0,
-        wins: 0,
-        losses: 0
+        address: "",
+        balance: 0
     })
-    let navigate = useNavigate()
 
-    const registerNewUser = () => {
-        return fetch("http://localhost:8088/players", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(player)
-        })
-            .then(res => res.json())
-            .then(createdUser => {
-                if (createdUser.hasOwnProperty("id")) {
-                    localStorage.setItem("lotto_user", JSON.stringify({
-                        id: createdUser.id
-                    }))
+    const navigate = useNavigate()
 
-                    navigate("/")
-                }
-            })
+    const updateUser = (e) => {
+        const copy = { ...user }
+
+        copy[e.target.id] = e.target.value
+
+        setUser(copy)
     }
 
     const handleRegister = (e) => {
         e.preventDefault()
-        return fetch(`http://localhost:8088/players?email=${player.email}`)
-            .then(res => res.json())
-            .then(response => {
-                if (response.length > 0) {
+        attemptLogin(user.email)
+            .then(res => {
+                if (res.length > 0) {
                     // Duplicate email. No good.
                     window.alert("Account with that email address already exists")
                 }
                 else {
                     // Good email, create user.
-                    registerNewUser()
+                    registerNewUser(user)
+                        .then(createdUser => {
+                            if (createdUser.hasOwnProperty("id")) {
+                                localStorage.setItem("lotto_user", JSON.stringify({
+                                    id: createdUser.id
+                                }))
+
+                                navigate("/")
+                            }
+                        })
                 }
             })
-    }
-
-    const updatePlayer = (evt) => {
-        const copy = { ...player }
-        copy[evt.target.id] = evt.target.value
-        setPlayer(copy)
     }
 
     return (
         <div className="auth-page">
             <form className="auth-form" onSubmit={handleRegister}>
-                <h2>Please Register for Faux Lotto</h2>
+                <h2>Please Register an Account</h2>
                 <div className="auth-row">
-                    <label htmlFor="name"> Full Name </label>
-                    <input onChange={updatePlayer}
-                        type="text" id="name" className="input i-border"
-                        placeholder="Enter your name" required autoFocus />
+                    <label htmlFor="fullName">First Name</label>
+                    <input onChange={updateUser}
+                        type="text" id="firstName" className="input i-border"
+                        placeholder="Type here..." required autoFocus />
                 </div>
                 <div className="auth-row">
-                    <label htmlFor="email"> Email address </label>
-                    <input onChange={updatePlayer}
+                    <label htmlFor="lastName">Last Name</label>
+                    <input onChange={updateUser}
+                        type="text" id="lastName" className="input i-border"
+                        placeholder="Type here..." required autoFocus />
+                </div>
+                <div className="auth-row">
+                    <label htmlFor="email">Email address</label>
+                    <input onChange={updateUser}
                         type="email" id="email" className="input i-border"
-                        placeholder="Email address" required />
+                        placeholder="Type here..." required />
                 </div>
                 <div className="auth-row">
                     <button

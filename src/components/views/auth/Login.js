@@ -30,7 +30,7 @@ const Login = () => {
     return (
         <div className="auth-page">
             <form className="auth-form" onSubmit={handleLogin}>
-                <h2>Please sign in</h2>
+                <h2>Please Sign In</h2>
                 <div className="auth-row">
                     <label htmlFor="inputEmail">Email address</label>
                     <input
