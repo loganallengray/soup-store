@@ -34,11 +34,7 @@ export const Register = () => {
                     registerNewUser(user)
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
-                                localStorage.setItem("lotto_user", JSON.stringify({
-                                    id: createdUser.id
-                                }))
-
-                                navigate("/")
+                                navigate("/login")
                             }
                         })
                 }

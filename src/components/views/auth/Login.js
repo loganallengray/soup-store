@@ -1,11 +1,15 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom"
 import { attemptLogin } from "../../../modules/fetch/authManager";
+import AppContext from "../../../modules/context/app-context";
 
 const Login = () => {
     const [email, setEmail] = useState("")
     const navigate = useNavigate()
+
+    const cxt = useContext(AppContext);
+    const setIsLoggedIn = cxt?.setIsLoggedIn;
 
     const handleLogin = (e) => {
         e.preventDefault()
@@ -19,6 +23,7 @@ const Login = () => {
                         id: user.id
                     }))
 
+                    setIsLoggedIn(true);
                     navigate("/")
                 }
                 else {

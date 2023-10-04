@@ -1,11 +1,22 @@
-import { Link, useLocation } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import AppContext from "../../modules/context/app-context";
 
 const Header = () => {
     const location = useLocation();
     const currentLocation = location.pathname
+    const navigate = useNavigate();
+
+    const cxt = useContext(AppContext);
+    const isLoggedIn = cxt?.isLoggedIn;
+    const setIsLoggedIn = cxt?.setIsLoggedIn;
 
     const logout = () => {
+        localStorage.clear();
 
+        setIsLoggedIn(false);
+
+        navigate("/");
     }
 
     return (
@@ -31,15 +42,7 @@ const Header = () => {
                     Cart
                 </p>
             </Link>
-            {true ? (
-                <Link
-                    className={"header-link-item" + `${currentLocation === "/login" ? " " + "header-selected-item" : ""}`}
-                    to="/login">
-                    <p>
-                        Login
-                    </p>
-                </Link>
-            ) : (
+            {isLoggedIn ? (
                 <div
                     className="header-link-item"
                     onClick={logout}>
@@ -47,6 +50,23 @@ const Header = () => {
                         Logout
                     </p>
                 </div>
+            ) : (
+                <>
+                    <Link
+                        className={"header-link-item" + `${currentLocation === "/login" ? " " + "header-selected-item" : ""}`}
+                        to="/login">
+                        <p>
+                            Login
+                        </p>
+                    </Link>
+                    <Link
+                        className={"header-link-item" + `${currentLocation === "/register" ? " " + "header-selected-item" : ""}`}
+                        to="/register">
+                        <p>
+                            Sign Up
+                        </p>
+                    </Link>
+                </>
             )}
         </div>
     )

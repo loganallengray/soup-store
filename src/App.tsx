@@ -7,6 +7,7 @@ import { ICartItem, ISoup } from './modules/interfaces';
 
 const App = () => {
 	const [cart, setCart] = useState<ICartItem[] | []>([]);
+	const [isLoggedIn, setIsLoggedIn] = useState(false);
 
 	const addCartItem = (soup: ISoup) => {
 		const cartCopy = [...cart];
@@ -45,12 +46,12 @@ const App = () => {
 
 	const appContextProps = {
 		cart: cart,
+		isLoggedIn: isLoggedIn,
+		setIsLoggedIn: setIsLoggedIn,
 		addCartItem: addCartItem,
 		removeCartItem: removeCartItem,
 		editCartItem: editCartItem
 	};
-
-	console.log(cart);
 
 	return (
 		<div className="app">
