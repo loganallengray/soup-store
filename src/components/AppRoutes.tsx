@@ -3,6 +3,8 @@ import Homepage from "./views/homepage/Homepage";
 import SoupList from "./views/soupList/SoupList";
 import Cart from "./views/cart/Cart";
 import SoupDetails from "./views/soupDetails/SoupDetails";
+import Login from "./views/auth/Login";
+import { Register } from "./views/auth/Register";
 
 const AppRoutes = () => {
     return (
@@ -14,6 +16,12 @@ const AppRoutes = () => {
                     <Route path=":id" element={<SoupDetails />} />
                 </Route>
                 <Route path="cart" element={<Cart />} />
+                {true ? (
+                    <>
+                        <Route path="login" element={<Login />} />
+                        <Route path="register" element={<Register />} />
+                    </>
+                ) : null}
             </Route>
         </Routes>
     )

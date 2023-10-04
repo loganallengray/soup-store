@@ -12,6 +12,16 @@
     outline: none;
 }
 
+/* Border */
+
+.i-border {
+    border: solid 2px #aaa;
+}
+
+.i-border:focus {
+    border: solid 2px #444;
+}
+
 /* Buttons */
 /* ------------------------------------------------------------------------- */
 
