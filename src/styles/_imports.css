@@ -1,5 +1,5 @@
 /* Styles Folder */
-@import url("./colors.css");
+@import url("./variables.css");
 @import url("./interactibles.css");
 
 /* Header */
@@ -7,6 +7,10 @@
 
 /* Homepage */
 @import url("../components/views/homepage/Homepage.css");
+
+/* Modals */
+@import url("../components/modals/ModalBackdrop.css");
+@import url("../components/modals/nutritionModal/NutritionDetailsModal.css");
 
 /* Auth Pages */
 @import url("../components/views/auth/auth.css");
@@ -16,7 +20,6 @@
 
 /* Soup Detail */
 @import url("../components/views/soupDetails/SoupDetails.css");
-@import url("../components/views/soupDetails/NutritionLabel.css");
 
 /* Cart */
 @import url("../components/views/cart/Cart.css");
