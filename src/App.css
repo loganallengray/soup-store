@@ -11,7 +11,7 @@ body,
 }
 
 .app-view {
-    height: calc(100vh - 60px);
+    height: var(--appview-height-100);
     overflow-y: auto;
 }
 

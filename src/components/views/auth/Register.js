@@ -55,7 +55,7 @@ export const Register = () => {
                     <label htmlFor="lastName">Last Name</label>
                     <input onChange={updateUser}
                         type="text" id="lastName" className="input i-border"
-                        placeholder="Type here..." required autoFocus />
+                        placeholder="Type here..." required />
                 </div>
                 <div className="auth-row">
                     <label htmlFor="email">Email address</label>

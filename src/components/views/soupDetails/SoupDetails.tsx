@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getSoup } from "../../../modules/fetch/soupManager";
 import { ISoup } from "../../../modules/interfaces";
-import NutritionLabel from "./NutritionLabel";
+import NutritionDetailsModal from "../../modals/nutritionModal/NutritionDetailsModal";
 
 const SoupDetails = () => {
+    const [showModal, setShowModal] = useState(false);
     const [notFound, setNotFound] = useState(false);
     const [soup, setSoup] = useState<ISoup>({
         id: 0,
@@ -65,9 +66,8 @@ const SoupDetails = () => {
                         <h2 id="soup-details-name">{soup.name}</h2>
                         <p id="soup-details-description">{soup.description}</p>
                     </div>
-                    <div id="soup-details-info-side">
-                        <NutritionLabel soup={soup} />
-                    </div>
+                    {/* <div id="soup-details-info-side">
+                    </div> */}
                 </div>
                 <div id="soup-details-options">
                     <div className="order-options">
@@ -75,11 +75,11 @@ const SoupDetails = () => {
                         <div className="input">${soup.price}</div>
                     </div>
                     <button className="button b-yellow">Order</button>
-                    <button className="button b-yellow">Nutrition Details</button>
+                    <button className="button b-border-yellow" onClick={() => setShowModal(true)}>Nutrition Details</button>
                 </div>
-                {/* <NutritionLabel soup={soup} /> */}
             </div>
             <img id="soup-details-image" src={soup.imageUrl} />
+            {showModal ? <NutritionDetailsModal soup={soup} setShowModal={setShowModal} /> : null}
         </div>
     )
 }

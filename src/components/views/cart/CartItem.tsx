@@ -25,7 +25,7 @@ const CartItem = ({ item }: Props) => {
                 </div>
                 <div className="cart-item-options">
                     <input
-                        className="input"
+                        className="input i-border"
                         value={item.amount}
                         min={1}
                         onChange={(e) => editCartItem(item, e.target.value)}
