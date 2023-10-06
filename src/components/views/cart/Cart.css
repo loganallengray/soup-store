@@ -1,6 +1,7 @@
 #cart-page {
     display: flex;
     padding: 0 10%;
+    height: 100%;
 }
 
 #cart-container {
