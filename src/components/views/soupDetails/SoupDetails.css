@@ -1,5 +1,6 @@
 #soup-details-page {
     display: flex;
+    height: 100%;
 }
 
 #soup-details-body {
@@ -7,7 +8,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 40%;
-    height: calc(100vh - 50px);
+    height: 100%;
 }
 
 #soup-details-info {
@@ -37,7 +38,7 @@
 #soup-details-image {
     position: absolute;
     width: 60%;
-    height: 100%;
+    height: var(--appview-height-100);
     right: 0;
     object-fit: cover;
 }
